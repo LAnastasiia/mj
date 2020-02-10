@@ -24,6 +24,9 @@ public abstract class MJPrintNode extends MJStatementNode {
     }
 
     @TruffleBoundary
+    private static void print(float f) { System.out.println(f); }
+
+    @TruffleBoundary
     private static void print(Object o) {
         System.out.println(o);
     }

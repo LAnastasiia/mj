@@ -35,7 +35,7 @@ public class MJFunction extends RootNode {
 
     @TruffleBoundary
     private static void print() {
-        System.out.print(" ");
+        System.out.print("_");
     }
 
     @Override

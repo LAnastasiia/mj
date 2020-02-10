@@ -24,4 +24,12 @@ public abstract class MJExpressionNode extends Node {
         CompilerDirectives.transferToInterpreter();
         throw new Error("type mismatch");
     }
+
+    public float executeFloat(VirtualFrame frame) {
+        Object result = executeGeneric(frame);
+        if (result instanceof Float)
+            return (float) result;
+        CompilerDirectives.transferToInterpreter();
+        throw new Error("type mismatch");
+    }
 }

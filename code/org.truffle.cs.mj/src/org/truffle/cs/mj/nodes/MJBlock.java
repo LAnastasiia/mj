@@ -14,9 +14,8 @@ public class MJBlock extends MJStatementNode {
     @Override
     @ExplodeLoop
     public Object execute(VirtualFrame frame) {
-        for (MJStatementNode stat : statements)
-            stat.execute(frame);
+        for (MJStatementNode statement : statements)
+            statement.execute(frame);
         return null;
     }
-
 }
